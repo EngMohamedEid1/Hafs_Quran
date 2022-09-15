@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63">
+  <g id="Group_4916" data-name="Group 4916" transform="translate(5 5)">
+    <rect id="Rectangle_7" data-name="Rectangle 7" width="63" height="63" rx="31.5" transform="translate(-5 -5)" fill="rgba(97,157,191,0.12)"/>
+    <g id="svgexport-6_-_2022-07-30T062154.932" data-name="svgexport-6 - 2022-07-30T062154.932" transform="translate(12.483 -68.177)">
+      <g id="Group_4918" data-name="Group 4918" transform="translate(0 85.333)">
+        <g id="Group_4917" data-name="Group 4917" transform="translate(0 0)">
+          <path id="Path_1219" data-name="Path 1219" d="M26.6,85.333H1.438A1.442,1.442,0,0,0,0,86.771v15.814a1.442,1.442,0,0,0,1.438,1.438H26.6a1.442,1.442,0,0,0,1.438-1.438V86.771A1.442,1.442,0,0,0,26.6,85.333Zm-.539,1.078-11.213,8.41a1.5,1.5,0,0,1-1.654,0L1.977,86.411Zm-5.989,8.965,6.11,7.548c.006.008.014.013.02.02H1.837c.006-.007.014-.013.02-.02l6.11-7.548a.539.539,0,0,0-.838-.679l-6.05,7.474V87.085l11.465,8.6a2.573,2.573,0,0,0,2.947,0l11.465-8.6v15.086L20.9,94.7a.539.539,0,0,0-.838.679Z" transform="translate(0 -85.333)" fill="#004e6e"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
