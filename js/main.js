@@ -47,29 +47,39 @@ blogBtn.addEventListener("click", (e) => {
 
 // slider
 
+const allButtons = document.querySelectorAll(".mynumber");
+const parentNumbers = document.getElementsByClassName("numbers")[0];
 const arrimg = [
   ` <img
-            style="z-index: 55"
             src="images/christopher-haehne.fw_.png"
-            class="img-slider"
+            class="img-slider" id="0"
           />`,
-  `<img src="images/andreas-764.png" class="img-slider" />`,
-  `<img src="images/Group 4733 (1)/Group 4733.jpg" class="img-slider" />`,
-  `<img src="images/thomas-pieber-freiraeume-2019.png" class="img-slider" />`,
-  `<img src="images/Group 4733 (1)/Group 4733.jpg" class="img-slider" />`,
+  `<img src="images/andreas-764.png" class="img-slider" id="1" />`,
+  `<img src="images/christopher-haehne.fw_.png" class="img-slider" id="2" />`,
+  `<img src="images/thomas-pieber-freiraeume-2019.png" class="img-slider" id="3" />`,
+  `<img src="images/christopher-haehne.fw_.png" class="img-slider" id="4" />`,
 ];
 
 let i = 0;
 sliderContainer.innerHTML += arrimg[i];
 pre.setAttribute("disabled", "disabled");
-sliderContainer.innerHTML += `  <p>0${i + 1} / 0 ${arrimg.length}</p>  `;
+sliderContainer.innerHTML += `  <p id="p-${i}">${i + 1} / ${
+  arrimg.length
+}</p>  `;
 
 next.addEventListener("click", (eo) => {
   pre.removeAttribute("disabled");
 
+  document.getElementById(i).classList.add("hide");
+  document.getElementById("p-" + i).classList.add("hide");
+
   i++;
+  // document.getElementById("p-" + i).classList.remove("hide");
+
   sliderContainer.innerHTML += arrimg[i];
-  sliderContainer.innerHTML += `  <p>0${i + 1} / 0${arrimg.length}</p>  `;
+  sliderContainer.innerHTML += `  <p id="p-${i}">${i + 1} / ${
+    arrimg.length
+  }</p>  `;
 
   if (i + 1 == arrimg.length) {
     next.setAttribute("disabled", "disabled");
@@ -83,10 +93,18 @@ next.addEventListener("click", (eo) => {
 
 pre.addEventListener("click", (eo) => {
   next.removeAttribute("disabled");
+  document.getElementById("p-" + i).classList.add("hide");
+  document.getElementById(i).classList.add("hide");
+
   i--;
 
-  sliderContainer.innerHTML += arrimg[i];
-  sliderContainer.innerHTML += `  <p>0${i + 1} / 0${arrimg.length}</p>  `;
+  document.getElementById("p-" + i).classList.remove("hide");
+  document.getElementById(i).classList.remove("hide");
+
+  // sliderContainer.innerHTML += arrimg[i];
+  // sliderContainer.innerHTML += `  <p id="p-${i}"> ${i + 1} / ${
+  //   arrimg.length
+  // }</p>  `;
 
   if (i == 0) {
     pre.setAttribute("disabled", "disabled");
@@ -98,36 +116,31 @@ pre.addEventListener("click", (eo) => {
   parentNumbers.getElementsByTagName("button")[i].classList.add("active-num");
 });
 
-const allButtons = document.querySelectorAll(".mynumber");
-const parentNumbers = document.getElementsByClassName("numbers")[0];
+// allButtons.forEach((item, index) => {
+//   item.addEventListener("click", (eo) => {
+//     // remove the current "active-num" => add "active-num" to target element
+//     parentNumbers
+//       .getElementsByClassName("active-num")[0]
+//       .classList.remove("active-num");
+//     item.classList.add("active-num");
 
-allButtons.forEach((item, index) => {
-  item.addEventListener("click", (eo) => {
-    // remove the current "active-num" => add "active-num" to target element
-    parentNumbers
-      .getElementsByClassName("active-num")[0]
-      .classList.remove("active-num");
-    item.classList.add("active-num");
+//     slidercontainer.innerHTML += arrimg[index];
+//     slidercontainer.innerHTML += `  <p>${index + 1} /  ${arrimg.length}</p>  `;
 
-    slidercontainer.innerHTML += arrimg[index];
-    slidercontainer.innerHTML += `  <p>0${index + 1} / 0 ${
-      arrimg.length
-    }</p>  `;
+//     i = index;
 
-    i = index;
+//     // last index
+//     if (index == arrimg.length - 1) {
+//       next.setAttribute("disabled", "disabled");
+//       pre.removeAttribute("disabled");
 
-    // last index
-    if (index == arrimg.length - 1) {
-      next.setAttribute("disabled", "disabled");
-      pre.removeAttribute("disabled");
-
-      // first index
-    } else if (index == 0) {
-      next.removeAttribute("disabled");
-      pre.setAttribute("disabled", "disabled");
-    } else {
-      next.removeAttribute("disabled");
-      pre.removeAttribute("disabled");
-    }
-  });
-});
+//       // first index
+//     } else if (index == 0) {
+//       next.removeAttribute("disabled");
+//       pre.setAttribute("disabled", "disabled");
+//     } else {
+//       next.removeAttribute("disabled");
+//       pre.removeAttribute("disabled");
+//     }
+//   });
+// });

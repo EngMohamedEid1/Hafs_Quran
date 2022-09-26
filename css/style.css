@@ -5,11 +5,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Poppins", sans-serif;
 }
 ul {
   list-style: none;
+}
+a {
+  text-decoration: none;
 }
 
 /* variables */
@@ -42,6 +48,7 @@ header ul li a {
   cursor: pointer;
   border: 2px solid #fff;
   transition: transform 0.3s;
+  text-decoration: none;
 }
 
 header ul li a.active {
@@ -465,6 +472,7 @@ header .fa-bars {
   display: flex;
   background-image: url(../images/Group\ 4937.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 20px;
   color: #fff;
   align-items: center;
@@ -621,6 +629,7 @@ header .fa-bars {
 }
 .blogs .content .box a {
   color: #004e6e;
+  text-decoration: none;
 }
 .blogs .content .box a:hover {
   text-decoration: none;
@@ -710,6 +719,7 @@ header .fa-bars {
   position: absolute;
   top: 0;
   width: 100%;
+  border-radius: 7px;
 }
 
 .slider-container p {
@@ -1059,6 +1069,7 @@ footer .links li {
 }
 footer .links li a {
   color: #fff;
+  text-decoration: none;
 }
 footer .links li a:hover {
   text-decoration: none;
@@ -1148,4 +1159,17 @@ footer .container > p {
     width: 90%;
     margin-bottom: 40px;
   }
+}
+.slidering {
+  text-align: center;
+  width: 30%;
+  margin: auto;
+}
+
+.show {
+  display: inline-block;
+}
+
+.hide {
+  display: none;
 }
