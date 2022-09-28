@@ -70,16 +70,10 @@ sliderContainer.innerHTML += `  <p id="p-${i}">${i + 1} / ${
 next.addEventListener("click", (eo) => {
   pre.removeAttribute("disabled");
 
-  document.getElementById(i).classList.add("hide");
-  document.getElementById("p-" + i).classList.add("hide");
-
+  onChangeImage(i , i + 1);
   i++;
-  // document.getElementById("p-" + i).classList.remove("hide");
-
   sliderContainer.innerHTML += arrimg[i];
-  sliderContainer.innerHTML += `  <p id="p-${i}">${i + 1} / ${
-    arrimg.length
-  }</p>  `;
+  sliderContainer.innerHTML += `<p id="p-${i}">${i + 1} / ${arrimg.length}</p>`;
 
   if (i + 1 == arrimg.length) {
     next.setAttribute("disabled", "disabled");
@@ -93,13 +87,12 @@ next.addEventListener("click", (eo) => {
 
 pre.addEventListener("click", (eo) => {
   next.removeAttribute("disabled");
-  document.getElementById("p-" + i).classList.add("hide");
-  document.getElementById(i).classList.add("hide");
+
+  onChangeImage(i , i - 1);
 
   i--;
 
-  document.getElementById("p-" + i).classList.remove("hide");
-  document.getElementById(i).classList.remove("hide");
+
 
   // sliderContainer.innerHTML += arrimg[i];
   // sliderContainer.innerHTML += `  <p id="p-${i}"> ${i + 1} / ${
@@ -116,6 +109,24 @@ pre.addEventListener("click", (eo) => {
   parentNumbers.getElementsByTagName("button")[i].classList.add("active-num");
 });
 
+function onChangeImage(prevI , nextI){
+  document.getElementById(prevI).classList.add("hide");
+  document.getElementById(`d${prevI}`).classList.add("hide");
+  document.getElementById("p-" + prevI).classList.add("hide");
+
+  let oldImage = document.getElementById(nextI);
+  if(oldImage){
+    oldImage.classList.remove("hide");
+  } 
+  let oldP = document.getElementById("p-" + nextI);
+  if(oldP){
+    oldP.classList.remove("hide");
+  } 
+  let oldD = document.getElementById("d" + nextI);
+  if(oldD){
+    oldD.classList.remove("hide");
+  }
+}
 // allButtons.forEach((item, index) => {
 //   item.addEventListener("click", (eo) => {
 //     // remove the current "active-num" => add "active-num" to target element
