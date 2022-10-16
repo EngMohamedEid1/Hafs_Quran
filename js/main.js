@@ -70,8 +70,10 @@ sliderContainer.innerHTML += `  <p id="p-${i}">${i + 1} / ${
 next.addEventListener("click", (eo) => {
   pre.removeAttribute("disabled");
 
-  onChangeImage(i , i + 1);
+  onChangeImage(i, i + 1);
   i++;
+  sliderContainer.innerHTML = ""; // ++++++++++++++++
+
   sliderContainer.innerHTML += arrimg[i];
   sliderContainer.innerHTML += `<p id="p-${i}">${i + 1} / ${arrimg.length}</p>`;
 
@@ -88,16 +90,16 @@ next.addEventListener("click", (eo) => {
 pre.addEventListener("click", (eo) => {
   next.removeAttribute("disabled");
 
-  onChangeImage(i , i - 1);
+  onChangeImage(i, i - 1);
 
   i--;
 
+  sliderContainer.innerHTML = ""; // ++++++++++++++++
 
-
-  // sliderContainer.innerHTML += arrimg[i];
-  // sliderContainer.innerHTML += `  <p id="p-${i}"> ${i + 1} / ${
-  //   arrimg.length
-  // }</p>  `;
+  sliderContainer.innerHTML += arrimg[i];
+  sliderContainer.innerHTML += `  <p id="p-${i}"> ${i + 1} / ${
+    arrimg.length
+  }</p>  `;
 
   if (i == 0) {
     pre.setAttribute("disabled", "disabled");
@@ -109,21 +111,21 @@ pre.addEventListener("click", (eo) => {
   parentNumbers.getElementsByTagName("button")[i].classList.add("active-num");
 });
 
-function onChangeImage(prevI , nextI){
+function onChangeImage(prevI, nextI) {
   document.getElementById(prevI).classList.add("hide");
   document.getElementById(`d${prevI}`).classList.add("hide");
   document.getElementById("p-" + prevI).classList.add("hide");
 
   let oldImage = document.getElementById(nextI);
-  if(oldImage){
+  if (oldImage) {
     oldImage.classList.remove("hide");
-  } 
+  }
   let oldP = document.getElementById("p-" + nextI);
-  if(oldP){
+  if (oldP) {
     oldP.classList.remove("hide");
-  } 
+  }
   let oldD = document.getElementById("d" + nextI);
-  if(oldD){
+  if (oldD) {
     oldD.classList.remove("hide");
   }
 }

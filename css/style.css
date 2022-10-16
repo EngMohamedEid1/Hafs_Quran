@@ -720,6 +720,8 @@ header .fa-bars {
   top: 0;
   width: 100%;
   border-radius: 7px;
+  height: 300px;
+  object-fit: cover;
 }
 
 .slider-container p {
