@@ -1,0 +1,109 @@
+.royal {
+  background-image: url(../images/back.jpg);
+  background-size: cover;
+  height: 400px;
+  position: relative;
+}
+.royal h2 {
+  position: relative;
+  font-weight: bold;
+  font-size: 42px;
+  text-align: center;
+  padding-top: 130px;
+  word-spacing: 10px;
+  letter-spacing: 4px;
+  z-index: 1;
+  color: #e7e4de;
+}
+.overlay {
+  position: absolute;
+  background-color: #000000ba;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* about us */
+
+.about-us {
+  padding: 30px;
+  /* height: 300px; */
+  text-align: center;
+  background-color: #e7e7e6;
+}
+.about-us h3 {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 30px 0;
+  border-bottom: 1px solid #004e6e;
+  width: 150px;
+  margin: auto;
+}
+.about-us p {
+  width: 50%;
+  margin: auto;
+  margin-top: 30px;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .about-us p {
+    width: 90%;
+  }
+}
+
+/* team */
+
+.team {
+  padding: 30px;
+  height: 300px;
+  text-align: center;
+  background-color: #d7d7d6;
+}
+@media (max-width: 900px) {
+  .team {
+    height: 600px;
+  }
+}
+.team h3 {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 30px 0;
+  border-bottom: 1px solid #004e6e;
+  width: 300px;
+  margin: auto;
+}
+.team .members {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.team .members .member {
+  position: relative;
+  top: 50px;
+}
+.team .members .member img {
+  display: block;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+@media (max-width: 900px) {
+  .team .members .member {
+    width: 40%;
+    text-align: center;
+  }
+  .team .members .member img {
+    width: 130px;
+    height: 130px;
+    margin: auto;
+  }
+}
+.team .member p {
+  font-weight: bold;
+  margin-top: 15px;
+}
+footer {
+  margin-top: 160px;
+}

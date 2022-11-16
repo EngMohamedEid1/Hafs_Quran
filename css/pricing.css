@@ -1,0 +1,144 @@
+.business-plans h2 {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  font-weight: bold;
+}
+.plans {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* gap: 10px; */
+  /* text-align: center; */
+}
+.plans > div {
+  border: 1px solid #004e6e;
+  padding: 10px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
+.plans .business,
+.plans .interprise-plus {
+  background-color: #f6f6f6;
+}
+.plans h4 {
+  text-align: center;
+  margin-bottom: 35px;
+  color: #004e6e;
+}
+.plans span {
+  text-align: center;
+  display: block;
+}
+.plans .before {
+  text-decoration: line-through;
+  font-weight: bold;
+  color: #999999;
+}
+.plans .after {
+  font-weight: bold;
+  color: #004e6e;
+  font-size: larger;
+}
+.plans .per {
+  font-size: smaller;
+  color: rgba(50, 50, 50, 0.673);
+}
+.plans button,
+.plans a {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+.plans button {
+  background-color: #004e6e;
+  color: #fff;
+  border-radius: 7px;
+  padding: 7px 0;
+}
+.plans a {
+  text-decoration: none;
+  color: #004e6e;
+}
+.plans li:not(.true) {
+  color: #999999;
+}
+.plans i {
+  color: #004e6e;
+}
+
+/* features */
+
+.features {
+  margin-top: 80px;
+  background-color: #f1f2f3;
+  padding: 40px;
+  border-radius: 25px;
+}
+@media (max-width: 500px) {
+  .features {
+    margin-top: 80px;
+    background-color: #f1f2f3;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 12px;
+  }
+}
+.features h2 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+/* add-on */
+
+.add-on {
+  margin-top: 100px;
+  background-color: #f1f1f1;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 50px;
+}
+.add-on h2 {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 40px;
+}
+.add-on .divs {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 80px;
+  flex-wrap: wrap;
+}
+.add-on .divs > div {
+  width: 20%;
+}
+@media (max-width: 500px) {
+  .add-on .divs > div {
+    width: 40%;
+  }
+}
+.divs img {
+  width: 65px;
+  margin-bottom: 20px;
+}
+.divs a {
+  text-decoration: none;
+}
+
+/* trusted-companies */
+
+.companies {
+  margin-top: 80px;
+}
+.companies h2 {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 70px;
+}
+.companies .images {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

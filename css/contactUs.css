@@ -1,0 +1,109 @@
+/* intro */
+
+.intro {
+  background-color: #748a9314;
+  margin-top: 0;
+  padding: 100px;
+  padding-top: 50px;
+}
+.intro h3 {
+  text-align: center;
+  margin-top: 0;
+}
+.intro p {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/*  contact */
+
+.contact {
+  width: 40%;
+  height: 60%;
+  box-shadow: 0px 0px 15px;
+  padding: 30px;
+  position: relative;
+  margin: auto;
+  bottom: 50px;
+  background-color: #ecedee;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 6px;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) and (max-width: 1145px) {
+  .contact {
+    width: 30%;
+    text-align: center;
+  }
+}
+@media (max-width: 700px) {
+  .contact {
+    width: 100%;
+  }
+  .contact .information img {
+    margin: auto;
+  }
+}
+.contact .information img {
+  border-radius: 50%;
+  display: block;
+  width: 150px;
+  height: 130px;
+  margin-left: 50px;
+}
+@media (max-width: 768px) {
+  .contact .information {
+    margin: auto;
+  }
+  .contact .ur-data {
+    margin: auto;
+  }
+}
+
+.contact .information div {
+  margin-top: 20px;
+}
+.contact .information div i {
+  margin-right: 15px;
+  /* display: inline-block; */
+  border: 1px solid #004e6e;
+  border-radius: 50%;
+  padding: 10px;
+  color: #004e6e;
+}
+
+.line {
+  width: 1px;
+  height: 100%;
+  background-color: #004f6e81;
+}
+.contact .ur-data input {
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid #004e6e;
+  padding: 5px;
+}
+@media (max-width: 600px) {
+  .contact input {
+    width: 100%;
+  }
+}
+.contact .ur-data textarea {
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid #004e6e;
+  padding: 5px;
+  width: 100%;
+}
+.contact .ur-data button {
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+  padding: 5px 0;
+  border: 1px solid #004e6e;
+  color: white;
+  background-color: #004e6e;
+}
